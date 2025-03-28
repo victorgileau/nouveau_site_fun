@@ -1,12 +1,30 @@
 /*--- Variables ---*/
+main {
+  display: grid;
+  grid-template-rows: 20% 70%;
+  gap: 25px;
+}
+main .hero {
+  border-radius: 15px;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+
 /*--- Header ---*/
 header {
+  z-index: 100;
+  transition: 0.2s;
   position: fixed;
   width: 100%;
   height: 15vh;
   overflow-y: hidden;
   background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: blur(2px);
+  -webkit-backdrop-filter: blur(3.5px);
+          backdrop-filter: blur(3.5px);
   display: grid;
   grid-template-columns: 30% 10% 35%;
   gap: 0px;
@@ -23,6 +41,7 @@ header .logo {
   justify-content: center;
 }
 header .logo img {
+  transition: 0.2s;
   max-width: 35vh;
   max-height: 15vh;
 }
@@ -48,6 +67,20 @@ header .liens a:hover {
   color: #bdbdbd;
 }
 
+@media screen and (max-width: 1000px) {
+  header {
+    grid-template-columns: 30% 10% 60%;
+  }
+  header .logo img {
+    max-width: 20vh;
+  }
+  header .liens {
+    gap: 5px;
+  }
+  header .liens a {
+    font-size: 20px;
+  }
+}
 /*--- Fonts ---*/
 @font-face {
   font-family: "Rufly";
@@ -72,7 +105,7 @@ a {
 main {
   width: 100%;
   height: 100vh;
-  background-image: url(./medias/img/Far-Cry-4-1.jpg);
+  background-image: url(./medias/img/far-cry-4_3-1410247904-far-cry-4-best-weapons-to-storm-kyrat-explained.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

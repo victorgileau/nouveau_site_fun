@@ -1,4 +1,5 @@
 @use './partials/variables';
+@use './partials/hero';
 @use './partials/header';
 
 /*--- Fonts ---*/
@@ -28,7 +29,7 @@ a {
 main {
     width: 100%;
     height: 100vh;
-    background-image: url(./medias/img/Far-Cry-4-1.jpg);
+    background-image: url(./medias/img/far-cry-4_3-1410247904-far-cry-4-best-weapons-to-storm-kyrat-explained.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
