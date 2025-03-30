@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./medias/img/logo/farcry_2.png" type="image/x-icon">
 </head>
-<body>
+<body id="body">
 
     <header>
         <div class="logo">
@@ -24,7 +24,7 @@
         <div class="middle"></div>
 
         <div class="liens">
-            <a href="#">Link 01</a>
+            <a @click="changeToRandomGame" href="#">Link 01</a>
             <a href="#">Link 02</a>
             <a href="#">Link 03</a>
             <a href="#">Link 04</a>
@@ -35,7 +35,7 @@
         <div class="seprator"></div>
         <div class="hero">
             <h1>You and I...... Are gonna tear shit up!!!</h1>
-            <div class="img"></div>
+            <div class="imgHero"></div>
             <div id="mouse"></div>
         </div>
     </main>
@@ -48,6 +48,8 @@
     
     
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./js/script.js"></script>
 </html>

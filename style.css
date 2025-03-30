@@ -30,7 +30,7 @@ main .hero h1 {
   color: #e8e8e8;
   text-shadow: 2px 2px 10px #929292;
 }
-main .hero .img {
+main .hero .imgHero {
   background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
   width: 100%;
   height: 100%;
@@ -88,44 +88,54 @@ main .hero #mouse {
     left: -14vw;
   }
 }
+/*
 @keyframes changeBackgroundImageHero {
-  0% {
-    background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
-    background-position: bottom left;
-  }
-  20% {
-    background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
-    background-position: bottom right;
-  }
-  25% {
-    background-image: url(../medias/img/farcry3/capsule_616x353.jpg);
-    background-position: bottom right;
-  }
-  45% {
-    background-image: url(../medias/img/farcry3/capsule_616x353.jpg);
-    background-position: bottom left;
-  }
-  50% {
-    background-image: url(../medias/img/farcry2/24042-image-far-cry-2.jpg);
-    background-position: bottom left;
-  }
-  70% {
-    background-image: url(../medias/img/farcry2/24042-image-far-cry-2.jpg);
-    background-position: bottom right;
-  }
-  75% {
-    background-image: url(../medias/img/farcry5/far-cry-5-pc-jeu-ubisoft-connect-europe-cover.jpg);
-    background-position: bottom right;
-  }
-  95% {
-    background-image: url(../medias/img/farcry5/far-cry-5-pc-jeu-ubisoft-connect-europe-cover.jpg);
-    background-position: bottom left;
-  }
-  100% {
-    background-image: url(../medias/img/farcry6/game-reviews-far-cry-6-xbox-series-x-review-2-1280x720.webp);
-    background-position: bottom left;
-  }
+    0% {
+        background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
+        background-position: bottom left;
+    }
+    20% {
+        background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
+        background-position: bottom right;
+    }
+    25% {
+        //-webkit-animation-timing-function: steps(1, end);
+
+        background-image: url(../medias/img/farcry3/capsule_616x353.jpg);
+        background-position: bottom right;
+    }
+    45% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry3/capsule_616x353.jpg);
+        background-position: bottom left;
+    }
+    50% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry2/24042-image-far-cry-2.jpg);
+        background-position: bottom left;
+    }
+    70% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry2/24042-image-far-cry-2.jpg);
+        background-position: bottom right;
+    }
+    75% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry5/far-cry-5-pc-jeu-ubisoft-connect-europe-cover.jpg);
+        background-position: bottom right;
+    }
+    95% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry5/far-cry-5-pc-jeu-ubisoft-connect-europe-cover.jpg);
+        background-position: bottom left;
+    }
+    100% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry6/game-reviews-far-cry-6-xbox-series-x-review-2-1280x720.webp);
+        background-position: bottom left;
+    }
 }
+*/
 @media screen and (max-width: 1000px) {
   main .hero {
     max-width: 95%;
@@ -224,23 +234,28 @@ header .liens a:hover {
     font-size: 20px;
   }
 }
+/*
 @keyframes changeLogo {
-  0% {
-    background-image: url(../medias/img/logo/Far_Cry_4_logo.webp);
-  }
-  25% {
-    background-image: url(../medias/img/logo/Far_Cry_3_Logo.png);
-  }
-  50% {
-    background-image: url(../medias/img/logo/farcry_2.png);
-  }
-  75% {
-    background-image: url(../medias/img/logo/FC5_Logo.png);
-  }
-  100% {
-    background-image: url(../medias/img/logo/FC6_Logo.png);
-  }
-}
+    0% {
+        background-image: url(../medias/img/logo/Far_Cry_4_logo.webp);
+    }
+    25% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/logo/Far_Cry_3_Logo.png);
+    }
+    50% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/logo/farcry_2.png);
+    }
+    75% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/logo/FC5_Logo.png);
+    }
+    100% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/logo/FC6_Logo.png);
+    }
+}*/
 /*--- Fonts ---*/
 @font-face {
   font-family: "Rufly";
@@ -287,20 +302,25 @@ main {
   animation-fill-mode: forwards;*/
 }
 
+/*
 @keyframes changeBackgroundImage {
-  0% {
-    background-image: url(./medias/img/far-cry-4_3-1410247904-far-cry-4-best-weapons-to-storm-kyrat-explained.webp);
-  }
-  25% {
-    background-image: url(./medias/img/farcry3/ss_842bfdeb44368babd55ad93af1cbbf560f9fb9a1.1920x1080.jpg);
-  }
-  50% {
-    background-image: url(./medias/img/farcry2/0000004527.1920x1080.jpg);
-  }
-  75% {
-    background-image: url(./medias/img/D2B6604C-997D-4A6A-998A-2EDA7FB258DB.png);
-  }
-  100% {
-    background-image: url(./medias/img/222E320E-FE48-4262-9923-9E53358F1AF5.png);
-  }
-}/*# sourceMappingURL=style.css.map */
+    0% {
+        background-image: url(./medias/img/far-cry-4_3-1410247904-far-cry-4-best-weapons-to-storm-kyrat-explained.webp);
+    }
+    25% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(./medias/img/farcry3/ss_842bfdeb44368babd55ad93af1cbbf560f9fb9a1.1920x1080.jpg);
+    }
+    50% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(./medias/img/farcry2/0000004527.1920x1080.jpg);
+    }
+    75% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(./medias/img/D2B6604C-997D-4A6A-998A-2EDA7FB258DB.png);
+    }
+    100% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(./medias/img/222E320E-FE48-4262-9923-9E53358F1AF5.png);
+    }
+}*//*# sourceMappingURL=style.css.map */
