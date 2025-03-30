@@ -1,0 +1,15 @@
+@mixin animationApplyParam($duration) {
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: step-end;
+    animation-fill-mode: forwards;
+}
+
+@mixin animationApplyParamNormal($duration) {
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: none;
+    animation-fill-mode: forwards;
+}

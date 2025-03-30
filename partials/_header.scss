@@ -1,4 +1,5 @@
 @use './variables';
+@use './mixins/mixin';
 @use 'sass:color';
 
 /*--- Header ---*/
@@ -13,11 +14,15 @@ header {
     background-color: rgba($color: #000000, $alpha: 0.5);
     backdrop-filter: blur(3.5px);
     display: grid;
-    grid-template-columns: 30% 10% 35%;
+    grid-template-columns: 30vw 10vw 35vw;
     gap: 0px;
     justify-content: center;
 
     .logo {
+        a {
+            width: 100%;
+            height: 100%;
+        }
         display: flex;
         width: 100%;
         height: 100%;
@@ -27,10 +32,30 @@ header {
         align-content: start;
         justify-content: center;
         img {
+            background-image: url(../medias/img/logo/Far_Cry_4_logo.webp);
             transition: 0.2s;
             max-width: 35vh;
             max-height: 15vh;
             //aspect-ratio: 1/1;
+            display: none;
+        }
+        
+        .imgLogo {
+            background-image: url(../medias/img/logo/Far_Cry_4_logo.webp);
+            width: 100%;
+            height: 100%;
+            background-size: 35vmin;
+            background-position: left;
+            background-repeat: no-repeat;
+
+            animation-name: changeLogo;
+            @include mixin.animationApplyParam(35s);
+            /*
+            animation-duration: 35s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: step-end;
+            animation-fill-mode: forwards;*/
         }
     }
     .liens {
@@ -71,5 +96,27 @@ header {
             }
         }
         
+    }
+}
+
+@keyframes changeLogo {
+    0% {
+        background-image: url(../medias/img/logo/Far_Cry_4_logo.webp);
+    }
+    25% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/logo/Far_Cry_3_Logo.png);
+    }
+    50% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/logo/farcry_2.png);
+    }
+    75% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/logo/FC5_Logo.png);
+    }
+    100% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/logo/FC6_Logo.png);
     }
 }

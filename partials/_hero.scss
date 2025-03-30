@@ -1,4 +1,5 @@
 @use './variables';
+@use './mixins/mixin';
 @use 'sass:color';
 
 main {
@@ -7,10 +8,150 @@ main {
     gap: 25px;
     .hero {
         border-radius: 15px;
-        max-width: 1200px;
+        max-width: 75vw;
         width: 100%;
         height: 100%;
         background-image: radial-gradient(rgba(255,255,255, 0.5), rgba(0,0,0,0.5));
         backdrop-filter: blur(1px);
+        overflow: hidden;
+
+        
+        position: relative;
+
+        h1 {
+            transition-duration: 0.2s;
+            position: absolute;
+            text-transform: uppercase;
+            font-family: "FarCry";
+            font-size: 64px;
+            //padding: 25px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: auto;
+            max-width: 750px;
+            width: 100%;
+
+            color: color.adjust(variables.$textMenuColor, $blackness: 10%);
+            text-shadow: 2px 2px 10px color.adjust(variables.$textMenuColor, $blackness: 75%);
+        }
+        .img {
+            background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
+            width: 100%;
+            height: 100%;
+            background-size: 130% 80vh;
+
+            animation-name: changeBackgroundImageHero;
+            @include mixin.animationApplyParamNormal(35s);
+            /*
+            animation-duration: 35s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: step-end;
+            animation-fill-mode: forwards;*/
+        }
+        &:hover {
+            h1 {
+                color: variables.$textMenuColor;
+            }
+            
+        }
+
+        #mouse {
+            transform-origin: 0 0;
+            animation-name: animePointerHero;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+            //@include mixin.animationApplyParam(2s);
+            position: absolute;
+            top: -35%;
+            left: -12.8vw;
+            margin: auto;
+            //will-change: transform;
+            user-select: none;
+            pointer-events: none;
+            
+            z-index: 200;
+            border-radius: 100%;
+            //background-color: variables.$textMenuColor;
+            background-image: url(../medias/img/scope.png) /*, variables.$textMenuColor*/;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            width: 50px;
+            aspect-ratio: 1/1;
+            
+            //backdrop-filter: blur(50px);
+        }
+    }
+}
+
+@keyframes animePointerHero {
+    0% {
+        opacity: 0.5;
+        background-image: url(../medias/img/scope.png) /*, color.adjust(variables.$textMenuColor, $blackness: 25%)*/;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 25px color.adjust(variables.$textMenuColor, $blackness: 100%);
+        width: 100px;
+        left: -14vw;
+    }
+}
+
+@keyframes changeBackgroundImageHero {
+    0% {
+        background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
+        background-position: bottom left;
+    }
+    20% {
+        background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
+        background-position: bottom right;
+    }
+    25% {
+        //-webkit-animation-timing-function: steps(1, end);
+        
+        background-image: url(../medias/img/farcry3/capsule_616x353.jpg);
+        background-position: bottom right;
+    }
+    45% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry3/capsule_616x353.jpg);
+        background-position: bottom left;
+    }
+    50% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry2/24042-image-far-cry-2.jpg);
+        background-position: bottom left;
+    }
+    70% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry2/24042-image-far-cry-2.jpg);
+        background-position: bottom right;
+    }
+    75% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry5/far-cry-5-pc-jeu-ubisoft-connect-europe-cover.jpg);
+        background-position: bottom right;
+    }
+    95% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry5/far-cry-5-pc-jeu-ubisoft-connect-europe-cover.jpg);
+        background-position: bottom left;
+    }
+    100% {
+        //-webkit-animation-timing-function: steps(1, end);
+        background-image: url(../medias/img/farcry6/game-reviews-far-cry-6-xbox-series-x-review-2-1280x720.webp);
+        background-position: bottom left;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        .hero {
+            max-width: 95%;
+        }
     }
 }
