@@ -10,17 +10,19 @@ document.body.addEventListener("mousemove", evt => {
 
 const body = document.querySelector('body');
 const main = document.querySelector('main');
-const hero = document.querySelector('.imgHero')
+const heroImg = document.querySelector('.imgHero');
 const logoHeader = document.querySelector('.imgLogo');
+
+let number = 0;
 
 const app = Vue.createApp({
   data() {
     return {
       gameArr: [
         {
-          logo: "../medias/img/logo/Far_Cry_4_logo.webp",
-          mainBg: "../medias/img/far-cry-4_3-1410247904-far-cry-4-best-weapons-to-storm-kyrat-explained.webp",
-          heroBg: "../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif",
+          logo: "../medias/img/logo/farcry_2.png",
+          mainBg: "../medias/img/farcry2/0000004527.1920x1080.jpg",
+          heroBg: "../medias/img/farcry2/24042-image-far-cry-2.jpg",
         },
         {
           logo: "../medias/img/logo/Far_Cry_3_Logo.png",
@@ -28,9 +30,9 @@ const app = Vue.createApp({
           heroBg: "../medias/img/farcry3/capsule_616x353.jpg",
         },
         {
-          logo: "../medias/img/logo/farcry_2.png",
-          mainBg: "../medias/img/farcry2/0000004527.1920x1080.jpg",
-          heroBg: "../medias/img/farcry2/24042-image-far-cry-2.jpg",
+          logo: "../medias/img/logo/Far_Cry_4_logo.webp",
+          mainBg: "../medias/img/far-cry-4_3-1410247904-far-cry-4-best-weapons-to-storm-kyrat-explained.webp",
+          heroBg: "../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif",
         },
         {
           logo: "../medias/img/logo/FC5_Logo.png",
@@ -47,14 +49,21 @@ const app = Vue.createApp({
   },
   methods: {
       changeToRandomGame() {
+        
         let random = Math.floor((Math.random() * (this.gameArr.length)));
-        console.log("test " + random);
-        logoHeader.style.backgroundImage = `url(${this.gameArr[random].logo})`;
-        main.style.backgroundImage = `url(${this.gameArr[random].mainBg})`;
-        console.log(this.gameArr[random].heroBg);
-        hero.style.backgroundImage = `url(${this.gameArr[random].heroBg})`;
+
+        if (number > 4) {
+          number = 0;
+        }
+
+        console.log("test " + number);
+        logoHeader.style.backgroundImage = `url(${this.gameArr[number].logo})`;
+        main.style.backgroundImage = `url(${this.gameArr[number].mainBg})`;
+        console.log(this.gameArr[number].heroBg);
+        heroImg.style.backgroundImage = `url(${this.gameArr[number].heroBg})`;
+        number++;
       }
   }
 });
 
-app.mount("main");
+app.mount(".btnChange");

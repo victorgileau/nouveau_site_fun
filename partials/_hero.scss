@@ -39,7 +39,9 @@ main {
             background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
             width: 100%;
             height: 100%;
-            background-size: 130% 80vh;
+            //background-size: 130% 80vh;
+            background-size: cover;
+            background-position: center;
 
             animation-name: changeBackgroundImageHero;
             @include mixin.animationApplyParamNormal(35s);

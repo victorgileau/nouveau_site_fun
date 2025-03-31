@@ -52,6 +52,13 @@ main {
     animation-fill-mode: forwards;*/
 }
 
+.btnChange {
+    button {
+        //@include mixin.firstBtnStyle(variables.$textMenuColor, variables.$bgDark);
+        @include mixin.firstBtnStyle(rgb(255, 193, 193), rgb(0, 29, 0));
+    }
+}
+
 /*
 @keyframes changeBackgroundImage {
     0% {

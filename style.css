@@ -34,7 +34,8 @@ main .hero .imgHero {
   background-image: url(../medias/img/ccc1a9e1-1597-42c6-9eba-2637f8a5faff-1024x768.avif);
   width: 100%;
   height: 100%;
-  background-size: 130% 80vh;
+  background-size: cover;
+  background-position: center;
   animation-name: changeBackgroundImageHero;
   animation-duration: 35s;
   animation-iteration-count: infinite;
@@ -220,12 +221,20 @@ header .liens a:hover {
   color: #bdbdbd;
 }
 
+@media screen and (max-width: 1600px) {
+  header .logo .imgLogo {
+    background-size: 25vmin;
+  }
+}
 @media screen and (max-width: 1000px) {
   header {
     grid-template-columns: 30% 10% 60%;
   }
   header .logo img {
     max-width: 20vh;
+  }
+  header .logo .imgLogo {
+    background-size: 20vmin;
   }
   header .liens {
     gap: 5px;
@@ -300,6 +309,23 @@ main {
   animation-direction: alternate;
   animation-timing-function: step-end;
   animation-fill-mode: forwards;*/
+}
+
+.btnChange button {
+  text-transform: uppercase;
+  font-family: "FarCry";
+  color: rgb(255, 193, 193);
+  background-color: rgb(0, 29, 0);
+  padding: 5px 25px;
+  border-radius: 25px;
+  font-size: 24px;
+  transition-duration: 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.btnChange button:hover {
+  color: rgb(0, 29, 0);
+  background-color: rgb(255, 193, 193);
+  border: 1px solid rgb(255, 193, 193);
 }
 
 /*

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @mixin animationApplyParam($duration) {
     animation-duration: $duration;
     animation-iteration-count: infinite;
@@ -12,4 +14,21 @@
     animation-direction: normal;
     animation-timing-function: none;
     animation-fill-mode: forwards;
+}
+
+@mixin firstBtnStyle($color, $complentaryColor) {
+    text-transform: uppercase;
+    font-family: "FarCry";
+    color: $color;
+    background-color: $complentaryColor;
+    padding: 5px 25px;
+    border-radius: 25px;
+    font-size: 24px;
+    transition-duration: 0.2s;
+    border: 1px solid rgba(0,0,0,0);
+    &:hover {
+        color: $complentaryColor;
+        background-color: $color;
+        border: 1px solid $color;
+    }
 }

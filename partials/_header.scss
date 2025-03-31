@@ -81,12 +81,25 @@ header {
     }
 }
 
+@media screen and (max-width: 1600px) {
+    header {
+        .logo {
+            .imgLogo {
+                background-size: 25vmin;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1000px) {
     header {
         grid-template-columns: 30% 10% 60%;
         .logo {
             img {
                 max-width: 20vh;
+            }
+            .imgLogo {
+                background-size: 20vmin;
             }
         }
         .liens {
